@@ -5,7 +5,7 @@ Welcome to **Nebula**, a sleek and futuristic number guessing game that launches
 ---
 
 ## 🚀 Live Demo
-[Click Here to Play Nebula](https://your-deployment-link.com)
+[Click Here to Play Nebula]([https://your-deployment-link.com](https://web-production-b2c22.up.railway.app/))
 
 
 ---
@@ -37,10 +37,6 @@ Choose your mission difficulty:
 - Custom mode for hardcore guessers 💥
 - Mobile responsive layout
 - Light animations for immersive experience
-
----
-
-## 🖼️ Screenshots
 
 ---
 
