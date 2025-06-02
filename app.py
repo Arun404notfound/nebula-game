@@ -26,8 +26,8 @@ def get_hint():
     user_guess = data['guess']
     max_num = data['max_num']
     previous_guesses = data['previous_guesses']
-    guesses_left = data['guesses_left'] # Add this to the data you send from frontend
-    hint_level = data['hint_level'] # Add this from frontend (basic, moderate, advanced)
+    guesses_left = data['guesses_left'] 
+    hint_level = data['hint_level']
 
     # Determine basic directional hint
     direction_hint = ""
@@ -36,7 +36,7 @@ def get_hint():
     elif user_guess > target_number:
         direction_hint = f"Your last guess ({user_guess}) was too high. The number is lower."
 
-    # Construct a more detailed prompt for Gemini
+    # Construct a detailed prompt for Gemini
     prompt_parts = [
         f"You are playing a number guessing game. The secret number is {target_number}.",
         f"The range for the number is 1 to {max_num}.",
@@ -65,7 +65,7 @@ def get_hint():
         # Basic sanitization/fallback in case Gemini gets too chatty
         if hint.lower().startswith("the hint is:"):
             hint = hint[len("the hint is:"):].strip()
-        if hint.startswith("Sure, here's a hint:"): # Example of another common AI intro
+        if hint.startswith("Sure, here's a hint:"): 
             hint = hint.split(':', 1)[1].strip()
         if hint.startswith("Okay, here's your hint:"):
             hint = hint.split(':', 1)[1].strip()
